@@ -1,0 +1,42 @@
+@mixin title-bg{
+  background: rgb(12,169,233);
+  background: -moz-linear-gradient(90deg, rgba(12,169,233,1) 1%, rgba(12,232,233,1) 59%, rgba(142,230,137,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(12,169,233,1) 1%, rgba(12,232,233,1) 59%, rgba(142,230,137,1) 100%);
+  background: linear-gradient(90deg, rgba(12,169,233,1) 1%, rgba(12,232,233,1) 59%, rgba(142,230,137,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0ca9e9",endColorstr="#8ee689",GradientType=1);
+} //compatible IE6+
+
+@mixin title-font{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 0.05rem;
+}
+
+header{
+  @include title-bg;
+  max-width: 100%;
+
+  div {
+    @include title-font;
+    padding: 2% 3%;
+    display: inline-block;
+    //float: left;
+  }
+
+}
+
+header::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+
+
+@media screen and (max-width: 600px){
+  header div{
+    display: block;
+    max-width: 100%;
+    text-align: center;
+  }
+}

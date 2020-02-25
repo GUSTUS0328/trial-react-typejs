@@ -1,0 +1,22 @@
+html, body{
+  margin: 0 auto;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul, nav{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*#bg_video{
+  display: block;
+  position: relative;
+}*/
+
+
